@@ -1,8 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Semantic Meta Layer",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
+  "description": "We are building the first step towards a pervasive and open semantic web, driven by the web consumer. We are a group of software developers & engineers active in the Montreal technology startup community and excited by the unrealized potential of open data & the open web. We have strong experience building web services (Python & Java) and data analysis (R & SciPy) applications.",
   "homepage_url": "http://extensionizr.com",
   "icons": {
     "16": "icons/icon16.png",
@@ -16,7 +16,7 @@
   },
   "browser_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
+    "default_title": "Semantic Meta Layer",
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
