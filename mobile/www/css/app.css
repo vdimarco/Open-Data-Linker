@@ -1,0 +1,42 @@
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+
+
+.about-content {
+	padding: 20px;
+}
+
+.splash {
+	margin-top: 10px;
+	text-align: center;
+	line-height: 1;
+}
+
+.splash-a {
+	font-size: 90px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.splash-b {
+	font-size: 40px;
+}
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+.splash-logo {
+	width: 160px; height: auto
+}
+
+.infoblock {
+	padding: 12px;
+	margin: 0px;
+	border: 1px solid #d0d0d0;
+	background-color: #fafafa;
+}

@@ -1,0 +1,23 @@
+<!--
+  This template loads for the 'tab.about' state (app.js)
+-->
+<ion-view title="'Search D2D'">
+  <ion-content has-header="true" has-tabs="true" padding="true" overflow-scroll="false">
+    
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="search" ng-model="query" placeholder="Search" ng-change="onQueryChange(query)">
+    <button class="button button-clear" ng-click="clearQuery()">
+      &times;
+    </button>
+  </label>
+
+  <ion-list>
+    <ion-item ng-repeat="result in results track by $index" type="item-text-wrap" href="#/tab/describe/{{result.linkId}}">
+      <h3>{{result.label | normalizeLabelLanguage }}</h3>
+      <p>{{result.identifier}}</p>
+    </ion-item>
+    
+  </ion-list>
+  </ion-content>
+</ion-view>

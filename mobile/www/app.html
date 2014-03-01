@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+      var ratio = $(window).height() / $('#frame').outerHeight();
+      $('#frame').css({'zoom': ratio, 'visibility': 'visible'});
+    });
+    </script>
+  	<style>
+  	#frame {
+  		width: 360px;
+  		height: 600px;
+      margin: 0 auto;
+      border: none;
+      display: block;
+      visibility: none;
+  	}
+
+    body {
+      background-color: black;
+      margin: 0;
+    }
+  	</style>
+  </head>
+  <body>
+  	<iframe id="frame" src="index.html"></iframe>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+
+<ion-view title="rawTitle">
+  <ion-content has-header="true" padding="true">
+	<h2>{{ describeTitle | normalizeLabelLanguage  }}</h2>
+	<p><b>{{ authors }}</b></p>
+
+	<h4 ng-show="superclasses">Is a class of:</h4>
+	<ul ng-repeat="i in superclasses">
+		<li><a href="#/tab/describe/{{i['@id']}}">{{i['rdfs:label'] | normalizeLabelLanguage }}</a></li>
+	</ul>
+	<div ng-show="description">
+	<h4>Description</h4>
+    <p class="infoblock">{{ description }}</p>
+	</div>
+
+	<h4 ng-show="subclasses">Has sub-classes:</h4>
+	<span ng-repeat="i in subclasses">
+		<span><a href="#/tab/describe/{{i['@id']}}">{{i['rdfs:label'] | normalizeLabelLanguage }}</a> &mdash; </span>
+	</span>
+
+
+	<h3 ng-show="reviews">Cochrane reviews</h3>
+	<ul class="list">
+	<li ng-repeat="review in reviews" class="item">
+		<a href="#/tab/describe/{{review['@id'] | stripFirstNamespace | magicEncode }}">{{ review['rdfs:label'] }}</a>
+	</li>
+	</ul>
+
+	<div ng-show="sameAs">
+		<a class="item" href="#tab/describe/{{sameAs['@id']}}">{{ describeTitle | normalizeLabelLanguage  }} on Cochrane.</a>
+		<a class="item" href="http://en.m.wikipedia.org/wiki/{{ describeTitle | normalizeLabelLanguage  }}">{{ describeTitle | normalizeLabelLanguage }} on Wikipedia.</a>
+	</div>
+
+	<div ng-show="isDrug">
+
+
+		<h3 class="">Mechanism of Action</h3>
+		<div class="infoblock">
+			{{ mechanism }}
+		</div>
+
+		<h3>Indication</h3>
+		<div class="infoblock">
+{{ indication }}
+		</div>
+
+		<h3>Absorption</h3>
+		<div class="infoblock">
+{{ absorption }}
+		</div>
+
+		<h3>Pharmacodynamics</h3>
+		<div class="infoblock">
+{{ pharmacodynamics }}
+		</div>
+
+	</div>
+
+
+	<div ng-show="interactions" style="margin-top: 12px">
+		<h3>Drug Interactions</h3>
+		<div class="list">
+			<a class="item"  ng-repeat="i in interactions" href="#/tab/describe/{{i['@id']}}">{{i['rdfs:label'] | normalizeLabelLanguage}}</a>
+		</div>
+	</div>
+
+	<div style="margin: 80px 0"></div>
+
+
+
+
+  </ion-content>
+</ion-view>
