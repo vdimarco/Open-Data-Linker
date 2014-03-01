@@ -44,6 +44,7 @@
       ],
       "js": [
         "src/inject/jquery.js",
+        "src/inject/dbpedia.js",
         "src/inject/inject.js"
       ]
     }

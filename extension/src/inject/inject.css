@@ -11,6 +11,11 @@
   top: 100px;
   left: -47px;
   width: 63px;
+  box-sizing: border-box;
+  z-index: 999999999999999999999999;
+}
+#_rdff * {
+  box-sizing: border-box !important;
 }
 #_rdff.rdff_opened {
   left: 0px;
@@ -62,10 +67,10 @@
 #_rdff .rdff_content {
   position: absolute;
   padding: 5px;
-  width: 37px;
+  width: 47px;
   right: 16px;
   top: 0px;
-  height: 150px;
+  height: 160px;
   background-color: #222;
   border: #555 double 3px;
   border-left: 0px;
@@ -77,7 +82,7 @@
 #_rdff .rdff_content .rdff_tool {
   width: 38px;
   height: 38px;
-  margin-left: 1px;
+  margin-left: -1px;
   background-color: #333;
   border-radius: 0px;
   border: #555 outset 2px;
@@ -111,8 +116,9 @@
 
 ._rdff_highlighter:hover {
   outline: red dashed 1px !important;
-  outline-offset: 5px;
+  cursor: crosshair !important;
 }
 #_rdff ._rdff_highlighter:hover {
   outline: 0px !important;
+  cursor: auto !important;
 }

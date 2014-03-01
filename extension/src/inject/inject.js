@@ -66,6 +66,8 @@ var _RDFF = {
         else {
           _RDFF.Notice.Show($(this).attr('title') + ' disactivated');
         }
+        
+        t.removeClass('rdff_opened');
       });
       
       t_action_highlighter.click(function() {
@@ -125,12 +127,12 @@ var _RDFF = {
     InitHighlighter: function() {
       
       var namespace = '._rdff_highlighter';
-      $('*').bind('mouseenter' + namespace, function(e) {
+      $('h1,h2,h3,h4,h5,h6,p,img,li,p a,li a').bind('mouseover' + namespace, function(e) {
         
         $('._rdff_highlighter').removeClass('_rdff_highlighter');
         $(e.target).addClass('_rdff_highlighter');
       });
-      $('*').bind('click' + namespace, function(e) {
+      $('h1,h2,h3,h4,h5,h6,p,img,li,p a,li a').bind('click' + namespace, function(e) {
         
         if($(e.target).is('#_rdff') || $(e.target).parents('#_rdff').length > 0) {return;}
         
@@ -143,8 +145,9 @@ var _RDFF = {
     CancelHighlighter: function() {
       
       var namespace = '._rdff_highlighter';
-      $('*').unbind(namespace);
+      $('h1,h2,h3,h4,h5,h6,p,img,li,p a,li a').unbind(namespace);
       $('._rdff_highlighter').removeClass('_rdff_highlighter');
+      $('#_rdff ._rdff_highlighter').removeClass('_rdff_active');
     }
   },
 
@@ -152,6 +155,25 @@ var _RDFF = {
     
     Infos: {
       parsedContent: undefined
+    },
+    
+    Annotate: function(obj) {
+      
+      var settings = {
+        'endpoint' : 'http://spotlight.sztaki.hu:2222/rest',
+        'confidence' : 0.15,
+        //'support' : undefined,
+        'powered_by': 'no',
+        'showScores': 'yes',
+        'spotter' : "Default",
+        //'disambiguator' : undefined,
+        'policy' : "whitelist",
+        'callback' : function callback(response) {
+          console.log(response);
+        }
+      }
+      
+      obj.annotate('best');
     },
     
     GetPath: function(obj) {
@@ -192,7 +214,7 @@ var _RDFF = {
         t[path] = html;
       });
       
-      $('p').each(function() {
+      $('p,li,p a,li a').each(function() {
         
         var html = $(this).html().trim();
         
