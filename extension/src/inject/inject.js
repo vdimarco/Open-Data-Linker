@@ -239,6 +239,8 @@ var _RDFF = {
         paragraphs: p,
         images: i
       };
+      
+      console.log(this.Infos.parsedContent);
     },
     
     Push: function() {
