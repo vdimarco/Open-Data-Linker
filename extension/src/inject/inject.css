@@ -1,0 +1,40 @@
+#_rdff {
+  position: fixed;
+  top: 100px;
+  left: -42px;
+  width: 58px;
+}
+#_rdff:hover {
+  left: 0px;
+}
+#_rdff .container {
+  position: relative;
+  height: 150px;
+}
+#_rdff .opener {
+  position: absolute;
+  top: calc(50% - 16px);
+  right: 0px;
+  border: white solid 1px;
+  border-left: 0px;
+  border-radius: 0px 10px 10px 0px;
+  height: 32px;
+  width: 16px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#_rdff .content {
+  position: absolute;
+  border-radius: 0px 10px 10px 0px;
+  padding: 5px;
+  width: 32px;
+  right: 16px;
+  top: 0px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#_rdff .content .tool {
+  border-radius: 5px;
+  background-color: #666;
+  width: 32px;
+  height: 32px;
+}
