@@ -1,0 +1,276 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"aov",
+				"aov	One-way between subjects ANOVA"
+			],
+			[
+				"a",
+				"aov	Two-way within subjects ANOVA"
+			],
+			[
+				"d",
+				"dat	Load Dataset"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 374.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"R",
+				"R Application Switch"
+			],
+			[
+				"R ",
+				"R Application Switch"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 615.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"sublime.packages_path()",
+			"sublime."
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/vondragon/git/Open Data/cannon_Nt3_graph.py",
+		"/home/vondragon/git/Open Data/xml_infoset_2rdf.py",
+		"/home/vondragon/git/Open Data/tab2rdf.py",
+		"/home/vondragon/git/Open Data/rdb2rdf_http.py",
+		"/home/vondragon/git/Open Data/qif2rdf.py",
+		"/home/vondragon/git/Open Data/outlook2rdf.py",
+		"/home/vondragon/git/Open Data/notation3.py",
+		"/media/v/home/v/git/hacking health/carenote-webclient/__init__.py",
+		"/media/v/home/v/git/hacking health/carenote-webclient/urls.py",
+		"/home/vondragon/git/MTLRUSER/CodeDojo/dojo_25FEB2014/R/dojo_25FEB2014.R",
+		"/home/vondragon/git/MTLRUSER/StatMarianne-shiny/ui.R",
+		"/home/vondragon/git/MTLRUSER/StatMarianne-shiny/server.R",
+		"/media/v/home/v/git/MTLRUSER/CodeDojo/dojo_25FEB2014/Presentation/dojo_25FEB2014.html",
+		"/media/v/home/v/git/BengioAMA",
+		"/media/v/home/v/git/hacking health/carenote-webclient/README.md",
+		"/media/v/home/vondragon/git/shamelessly/daemon/tweets_template.js",
+		"/media/v/home/vondragon/git/shamelessly/daemon/package.json",
+		"/media/v/home/vondragon/git/shamelessly/daemon/app.js",
+		"/media/v/home/vondragon/git/shamelessly/daemon/model.js",
+		"/media/v/home/vondragon/git/shamelessly/daemon/account.json",
+		"/media/v/home/vondragon/git/kaggle/amazon/logistic_regression_updated_LM.py",
+		"/media/v/home/vondragon/git/kaggle/amazon/IBM_BestPractices_Visualization.PDF",
+		"/media/v/home/vondragon/git/kaggle/amazon/domino.log",
+		"/media/v/home/vondragon/git/shamelessly/daemon/.gitignore",
+		"/media/v/home/vondragon/git/shamelessly/website/models/shame.js",
+		"/media/v/home/vondragon/git/shamelessly/website/data/dummy.json",
+		"/media/v/home/vondragon/git/shamelessly/initializr/index.html",
+		"/media/v/home/vondragon/git/shamelessly/website/v1.html",
+		"/media/v/home/vondragon/git/shamelessly/website/views/index.html",
+		"/home/vondragon/.config/sublime-text-3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/media/v/home/vondragon/git/nodetest1/app.js",
+		"/media/v/home/vondragon/git/dashing_dashboard/jobs/sample_job.job.js",
+		"/home/vondragon/.config/sublime-text-3/Packages/Enhanced-R/Enhanced-R.sublime-settings",
+		"/home/vondragon/floobits/welcome.md",
+		"/media/v/home/vondragon/git/dashing_dashboard/jobs/buzzwords.job.js",
+		"/media/v/home/vondragon/git/dashing_dashboard/jobs/convergence.job.js",
+		"/media/v/home/vondragon/git/dashing_dashboard/jobs/sample.job.js",
+		"/usr/local/lib/node_modules/dashing-js/README.md",
+		"/media/v/home/vondragon/git/dashing_dashboard/server.js",
+		"/media/v/home/vondragon/git/test.r",
+		"/home/vondragon/Documents/MRUG/R User Email - 2014-01-18",
+		"/media/v/home/vondragon/Downloads/limite-arr06-villes.kml",
+		"/home/vondragon/.cache/.fr-fKkGk6/README.md",
+		"/home/vondragon/.config/sublime-text-3/Packages/User/SublimeREPL.sublime-settings",
+		"/home/vondragon/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/vondragon/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/vondragon/.config/sublime-text-3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/usr/bin/R",
+		"/home/vondragon/.config/sublime-text-3/Packages/User/Enhanced-R.sublime-settings",
+		"/home/vondragon/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/media/v/home/vondragon/git/nodetest1/routes/index.js",
+		"/media/v/home/vondragon/git/dashing_dashboard/package.json",
+		"/media/v/home/vondragon/git/dashing_dashboard/Procfile",
+		"/media/v/home/vondragon/git/pivottable/proof.html",
+		"/media/v/home/vondragon/git/pivottable/examples/local.html",
+		"/media/v/home/vondragon/Downloads/pivottable-master/examples/mps_prepop_onClick.html",
+		"/media/v/home/vondragon/Downloads/pivottable-master/examples/index.html",
+		"/media/v/home/vondragon/git/dc/README.md",
+		"/media/v/home/vondragon/git/dc/make",
+		"/media/v/home/vondragon/git/dashing_dashboard/README.md",
+		"/media/v/home/vondragon/Dropbox/_BLD/soccermetrics/scores.csv",
+		"/media/v/home/vondragon/Downloads/node-v0.10.22/README.md",
+		"/media/v/home/vondragon/Dropbox/MRUG/1_Let.R"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 94.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"~/Doc",
+			"~/D",
+			"~/Do",
+			"~/Doc",
+			"\n    "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "cannon_Nt3_graph.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/.config/sublime-text-3/Packages/Enhanced-R/Enhanced-R.sublime-settings"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 178.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
