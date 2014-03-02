@@ -1,0 +1,127 @@
+
+# General 
+
+Our webservice exists at:
+
+	http://91.234.48.244:2222/rest/... 
+	http://semweb.cloudapp.net:2222/rest/...
+
+possible commands: /annotate, /spot, /disambiguate, /candidates
+
+## Spotting 
+
+**/spot** : takes text as input and recognizes surface forms -- e.g. names of entities/concepts to annotate. Several spotting techniques are available, such as dictionary lookup and Named Entity Recognition (NER). 
+
+* **Endpoint**: ```/spot``` (e.g. http://spotlight.dbpedia.org/rest/spot)
+* **Parameters**: 
+  * text: input text to annotate
+  * spotter: the spotter implementation to use. One of: Default,
+        LingPipeSpotter,
+        AtLeastOneNounSelector,
+        CoOccurrenceBasedSelector,
+        NESpotter,
+        KeyphraseSpotter,
+        OpenNLPChunkerSpotter,
+        WikiMarkupSpotter,
+        SpotXmlParser,
+        AhoCorasickSpotter
+* **Example call**:
+```
+curl -H "Accept: application/json"  \
+  "http://spotlight.dbpedia.org/rest/spot/?text=Berlin&spotter=LingPipeSpotter"
+```
+* **Example output**:
+```json
+{"annotation":{"@text":"Berlin","surfaceForm":{"@name":"Berlin","@offset":"0"}}}
+```
+* **Supported output types (POST/GET):** text/xml, application/json, text/turtle (NIF)
+
+
+## Disambiguate 
+
+**Disambiguation**: takes spotted text input, where entities/concepts have already been recognized and marked as wiki markup or xml. Chooses an identifier for each recognized entity/concept given the context. 
+
+**Supported types (POST/GET):**XML, JSON, HTML, RDFa, NIF
+
+
+## Annotate 
+
+**Annotation**: runs spotting and disambiguation. Takes text as input, recognizes entities/concepts to annotate and chooses an identifier for each recognized entity/concept given the context.
+
+**Supported types (POST/GET):** XML, JSON, HTML, RDFa, NIF
+
+
+## Candidates
+
+Similar to annotate, but returns a ranked list of candidates instead of deciding on one. These list contains some properties as described below:
+
+* `support`: how prominent is this entity, i.e. number of inlinks in Wikipedia
+* `priorScore`: normalized support
+* `contextualScore`: score from comparing the context representation of an entity with the text (e.g. cosine similartity with if-icf weights)
+* `percentageOfSecondRank`: measure how much the winning entity has won by taking `contextualScore_2ndRank / contextualScore_1stRank`, which means the lower this score, the further the first ranked entity was "in the lead"
+* `finalScore`: combination of all of them
+
+**Supported types (POST/GET):**XML, JSON
+
+
+## Feedback
+
+In development
+
+**Supported types (POST/GET):**XML
+
+
+## Examples
+
+**Example 1: Simple request**
+
+* `text`="President Obama called Wednesday on Congress to extend a tax break for students included in last year's economic stimulus package, arguing that the policy provides more generous assistance."
+* `confidence`=0.2
+* `support`=20
+* whitelist all types by not setting the `sparql` parameter
+
+```shell
+curl http://spotlight.dbpedia.org/rest/annotate \
+  --data-urlencode "text=President Obama called Wednesday on Congress to extend a tax break
+  for students included in last year's economic stimulus package, arguing
+  that the policy provides more generous assistance." \
+  --data "confidence=0.2" \
+  --data "support=20"
+```
+
+**Example 2: Using SPARQL for filtering**
+
+This example demonstrates how to keep the annotations constrained to only politicians related to Chicago.
+
+* `text`= "President Obama called Wednesday on Congress to extend a tax break for students included in last year's economic stimulus package, arguing that the policy provides more generous assistance."
+* `confidence` = 0.2
+* `support` = 20
+* `sparql` = `SELECT DISTINCT ?politician WHERE { ?politician a <http://dbpedia.org/ontology/OfficeHolder> . ?politician ?related <http://dbpedia.org/resource/Chicago> }`
+
+```shell
+curl http://spotlight.dbpedia.org/rest/annotate \
+  --data-urlencode "text=President Obama called Wednesday on Congress to extend a tax break
+  for students included in last year's economic stimulus package, arguing
+  that the policy provides more generous assistance." \
+  --data "confidence=0.2" \
+  --data "support=20" \
+ --data-urlencode "sparql=SELECT DISTINCT ?x WHERE { ?x a <http://dbpedia.org/ontology/OfficeHolder> . ?x ?related <http://dbpedia.org/resource/Chicago> . }"
+```
+
+**Notice**: Due to system resources restrictions, for this demo we only use the first 2000 results returned for each query (default for the public DBpedia SPARQL endpoint). However you are welcome to download the software+data and install in your server for real world use cases.
+
+**Attention**: Make sure to encode your SPARQL query before adding it as the value of the ``&sparql`` parameter - see [`java.net.URLEncoder.encode()`](http://download.oracle.com/javase/6/docs/api/java/net/URLEncoder.html).
+
+## Input text size limits
+
+Spotlight Web Service¹ HTTP POST request has some text size limitations:
+* Using the <b> text </b> parameter (with a plain text file, .txt): The limit is a plain text file of 460kB (which is 460000 characters)
+* Using the <b> url </b> parameter (with the url of a .html file): The limit is a html file of 490kB
+
+Note: Spotlight will extract the text from the html file, and this extracted plain text must be less than the <b> text </b> parameter limit. (In the test the html file was created from the plain text used for the <b> text </b> parameter replacing all "\n" by "\n\<p>")
+
+**Attention**: Spotlight Web Service can be used with GET too. The <b> url </b> parameter input text size limit is the same. But, when using <b> text </b> parameter this limit can decrease depending of the browser, client-side http library and the server-side http library.
+
+The Spotlight server library (Apache Server) is limited to 7kB (7000 characters). This [article](http://www.boutell.com/newfaq/misc/urllength.html) and this stack overflow [anwser](http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers) tell more about browsers and libraries limitations.
+
+¹The tests were done using the [Spotlight Lucene English](http://spotlight.dbpedia.org/rest/).
