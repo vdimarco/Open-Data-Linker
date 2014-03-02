@@ -17,7 +17,7 @@ The concepts of the semantic web & linked data have been around for many years. 
 
 * Our main efforts resulted in a browser extension for Chrome, powered by the DBpedia spotlight project, lucene & sample data sets indexed from the Canadian open data portal. 
 * __{in progress}__ ~~Processing & indexing of the data.gc.ca data into Notation3 (N3) format was done with a concoction of ETL scripts in the ETL folder.~~ 
-* __{in progress}__ ~~An HMTL5 mobile optimized website was used to make the linked data we indexed completely searchable. The data should adhear to the W3C semantic web standards for RDF and be searchable using the more powerful SPARQL language.~~
+* __{in progress}__ ~~An HMTL5 mobile optimized website was used to make the linked data we indexed completely searchable. The data should adhere to the W3C semantic web standards for RDF and be searchable using the more powerful SPARQL language.~~
 * __{in progress}__ ~~Lastly, a web app was constructed in Node.js (MEAN stack & socket.io) to vizualize a stream of annotation meta-data & user feedback taking place in real-time across the web.~~
 
 
