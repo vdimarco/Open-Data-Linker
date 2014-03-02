@@ -8,6 +8,11 @@ Our webservice exists at:
 
 possible commands: /annotate, /spot, /disambiguate, /candidates
 
+sample call:
+
+
+
+
 ## Spotting 
 
 **/spot** : takes text as input and recognizes surface forms -- e.g. names of entities/concepts to annotate. Several spotting techniques are available, such as dictionary lookup and Named Entity Recognition (NER). 

@@ -6,10 +6,10 @@ In JSON all items are attribute value(s) pairs.
 This script will take one attribute from the JSON object as the
 subject and use the remaining atttibute value pairs as verb object pairs
 
--i <JSON file>             The location of the (i)nput JSON file
--o <N3 file>               The location of the (o)output N3 file
--s <subject attribute>    The attribute from the JSON object to act as N3 subject
--f                         Skips a JSON Object if the subject attribute does not exist
+-i <JSON file>          The location of the (i)nput JSON file
+-o <N3 file>            The location of the (o)output N3 file
+-s <subject attribute>  The attribute from the JSON object to act as N3 subject
+-f                      Skip JSON Object if the subject attribute doesn't exist
 
 """
 import json
@@ -21,7 +21,7 @@ def printVal (values):
         for attr in values.keys():
             print "<#{}> ".format(attr)
             printVal (values[attr])
-    elif isinstance(values, list):
+    elif isinstance(valuse, list):
         first = True
         for value in values:
             if first:
