@@ -160,7 +160,7 @@ var _RDFF = {
     Annotate: function(obj) {
       
       var settings = {
-        'endpoint' : 'http://spotlight.sztaki.hu:2222/rest',
+        'endpoint' : 'semweb.cloudapp.net/rest',
         'confidence' : 0.15,
         //'support' : undefined,
         'powered_by': 'no',
@@ -246,7 +246,7 @@ var _RDFF = {
     Push: function() {
       
       $.ajax({
-        url: 'http://spotlight.sztaki.hu:2222/rest',
+        url: 'http://semweb.cloudapp.net/rest',
         dataType: 'json',
         type: 'post',
         data: {

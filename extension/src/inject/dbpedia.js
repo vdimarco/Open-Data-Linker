@@ -50,7 +50,7 @@ function sortOffset(a,b){
    var powered_by = "<div style='font-size: 9px; float: right'><a href='http://spotlight.dbpedia.org'>Powered by DBpedia Spotlight</a></div>";
 
    var settings = {      
-      'endpoint' : 'http://spotlight.sztaki.hu:2222/rest',
+      'endpoint' : 'http://semweb.cloudapp.net/rest',
       'confidence' : 0.4,          //
       'support' : 20,
       'powered_by': 'yes',         // yes or no
