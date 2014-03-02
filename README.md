@@ -11,13 +11,13 @@ The concept of the semantic web & linked data has been around for many years. Th
 
 Installation
 -----------
-The dev version of our extension can be install by:
-1. Clone or download this repository to your computer. 
-2. Navigate to chrome://extensions/
-3. Make sure the "Developer Mode" checkbox is enabled. 
-4. Click the "Load Unpacked Extensions" button & navigate to the ./extensions folder
-5. Now you can turn & article into a linked "hyperdata" like wikipedia page!
+The dev version of our extension can be installed by doing the following:
+  1. Clone or download this repository `git clone https://github.com/vdimarco/Open-Data-Linker`
+  2. Navigate your Chrome browser to `chrome://extensions/`
+  3. Make sure the "Developer Mode" checkbox is enabled. 
+  4. Click the "Load Unpacked Extensions" button & navigate to the ./extensions folder in this repo.
+  5. Feel the power coursing through your veins, with your newly acquired superhuman ability to turn any article into a semantically annotated page filled with linked data connections! 
 
-A new icon should appear next to the chrome settings button in the top left corner. You will also notice that a little black arrow will appear on the leftmost side of the page. Click this button to reveal the annotator!
+The UI is intended to be minimal, and we would love feedback on how we can strike a balance between an augmentation tool that stays out of your way until the minute you need it. An icon for the extension should have appeared next to the chrome settings button in the top left corner, next to the right edge of the omnibar. You will also notice that a little black arrow on the leftmost side of any webpage. Click this button to reveal... the annotator!
 
 As part of the 2014 Canadian Open Data Experience {CODE} 
