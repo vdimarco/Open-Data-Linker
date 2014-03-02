@@ -246,7 +246,7 @@ var _RDFF = {
     Push: function() {
       
       $.ajax({
-        url: 'http://spotlight.dbpedia.org/rest/annotate',
+        url: 'http://spotlight.sztaki.hu:2222/rest',
         dataType: 'json',
         type: 'post',
         data: {
