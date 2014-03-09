@@ -1,7 +1,11 @@
 Deeply Connected
 ================
 
-Semantically turn any web page into a wikipedia page, complete with the following annotations: 
+Semantically turn any web page into a wikipedia page.
+
+<a href="javascript:function se(d) {return d.selection ? d.selection.createRange().text : d.getSelection()} s = se(document); for (i=0; i<frames.length && !s; i++) s = se(frames[i].document); if (!s || s=='') s = prompt('Enter text to annotate with DBpedia Spotlight',''); open('http://dbpedia-spotlight.github.com/demo/index.html' + (s ? '?execute=yes&client=bookmarklet&text=' + encodeURIComponent(s) : '')).focus();" title="Spotlight This">Spotlight This</a>
+
+Complete with the following annotations: 
 
 * data links (%)
 * tags (#)
