@@ -14,7 +14,7 @@ Bookmarklet
 
 The kind people working on DBpedia Spotlight created a great bookmarklet to showcase the power of Spotlight. Drag it into your toolbar, select a paragraph of text and give it a whirl!
 
-<a title="Annotate with Spotlight" href="javascript:function se(d) {return d.selection ? d.selection.createRange().text : d.getSelection()} s = se(document); for (i=0; i<frames.length && !s; i++) s = se(frames[i].document); if (!s || s=='') s = prompt('Enter%20text%20to%20annotate%20with%20DBpedia%20Spotlight',''); open('http://dbpedia-spotlight.github.com/demo/index.html' + (s ? '?execute=yes&client=bookmarklet&text=' + encodeURIComponent(s) : '')).focus();">Annotate with Spotlight</a><script src="https://raw.github.com/vdimarco/Open-Data-Linker/master/DBpediaSpot_bookmarklet.js" type="text/javascript"></script>
+<a title="Annotate with Spotlight" href="http://dbpedia-spotlight.github.io/demo/index.html?execute=yes&client=bookmarklet&text=">Annotate with Spotlight</a><script src="https://raw.github.com/vdimarco/Open-Data-Linker/master/DBpediaSpot_bookmarklet.js" type="text/javascript"></script>
 
 The Canadian Open Data Experience
 -------------------------------
