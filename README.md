@@ -12,9 +12,11 @@ Semantically turn any web page into a wikipedia page. You will see the following
 Bookmarklet
 -------------
 
-The kind people working on DBpedia Spotlight created a great bookmarklet to showcase the power of Spotlight. Drag it into your toolbar, select a paragraph of text and give it a whirl!
+The kind people working on DBpedia Spotlight created a great bookmarklet to showcase the power of Spotlight. 
 
-<a title="Annotate with Spotlight" href="https://raw.github.com/vdimarco/Open-Data-Linker/master/DBpediaSpot_bookmarklet.js">Annotate with Spotlight</a>
+Drag the link below into your bokmarks bar. Press it once you've selected a paragraph of text to see the annotations for yourself.
+
+<a href="javascript:function se(d) {return d.selection ? d.selection.createRange().text : d.getSelection()} s = se(document); for (i=0; i<frames.length && !s; i++) s = se(frames[i].document); if (!s || s=='') s = prompt('Enter text to annotate with DBpedia Spotlight',''); open('http://dbpedia-spotlight.github.com/demo/index.html' + (s ? '?execute=yes&client=bookmarklet&text=' + encodeURIComponent(s) : '')).focus();">Annotate with Spotlight</a>
 
 The Canadian Open Data Experience
 -------------------------------
