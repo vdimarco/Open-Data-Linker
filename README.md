@@ -1,17 +1,20 @@
 Deeply Connected
 ================
 
-Semantically turn any web page into a wikipedia page. 
-
-Here' a great <a id="bookmarklet_link" href="#bookmarklet_container">bookmarklet</a> the kind people working on DBpedia created to showcase the power of Spotlight. Drag it into your toolbar, select a paragraph of text and give it a whirl!
-
-Complete with the following annotations: 
+Semantically turn any web page into a wikipedia page. Complete with the following annotations: 
 
 * data links (%)
 * tags (#)
 * ~~comments (!)~~
 * ~~questions (?)~~
 * ~~content notes (@)~~
+
+Bookmarklet
+-------------
+
+The kind people working on DBpedia Spotlight created a great bookmarklet to showcase the power of Spotlight. Drag it into your toolbar, select a paragraph of text and give it a whirl!
+
+<a href="javascript:function se(d) {return d.selection ? d.selection.createRange().text : d.getSelection()} s = se(document); for (i=0; i<frames.length && !s; i++) s = se(frames[i].document); if (!s || s=='') s = prompt('Enter%20text%20to%20annotate%20with%20DBpedia%20Spotlight',''); open('http://dbpedia-spotlight.github.com/demo/index.html' + (s ? '?execute=yes&client=bookmarklet&text=' + encodeURIComponent(s) : '')).focus();">Spotlight Text</a>
 
 
 The Canadian Open Data Experience
