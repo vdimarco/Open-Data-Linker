@@ -14,7 +14,7 @@ Bookmarklet
 
 The kind people working on DBpedia Spotlight created a great bookmarklet to showcase the power of Spotlight. 
 
-Drag the code below into your bookmarks bar. Select any paragraph of text & click on the bookmarklet. The text will be dynamically annotated with links to semantic data.
+Select and drag the "Spotlight" javascript function below into your bookmarks bar. Then you can select any text, click on your new Spotlight bookmarklet and it will be dynamically annotated with linked data.
 
 ```javascript
 javascript:function Spotlight(d){return d.selection?d.selection.createRange().text:d.getSelection()} s=se(document);for(i=0;i<frames.length&&!s;i++)s=se(frames[i].document);if(!s||s=='')s=prompt('Enter text to annotate with DBpedia Spotlight',''); open("http://dbpedia-spotlight.github.com/demo/index.html"+(s?"?execute=yes&client=bookmarklet&text="+encodeURIComponent(s):"")).focus();
